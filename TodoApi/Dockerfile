@@ -33,7 +33,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0-nanoserver-1809 AS build
 ARG configuration=Release
 WORKDIR /src
 COPY ["TodoApi.csproj", "./"]
-RUN dotnet restore "TodoApi.csproj"
+RUN dotnet restore "TodoApi.csproj.user"
 COPY . .
 WORKDIR "/src"
 RUN ls -la
