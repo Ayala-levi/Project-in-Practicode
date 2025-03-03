@@ -11,6 +11,7 @@ axios.interceptors.request.use(
   (err) => {
     // רישום השגיאה בקונסול
     console.error(" error in ", err)
+    console.log(" error in ", err)
     return Promise.reject(err);
   })
 
