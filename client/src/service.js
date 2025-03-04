@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 // הגדרת כתובת בסיס לכל הבקשות
-axios.defaults.baseURL = "http://localhost:5137";
-
+axios.defaults.baseURL =process.env.REACT_APP_API_URL
 // הוספת interceptor לטיפול בבקשות יוצאות
 axios.interceptors.request.use(
   (res) => {
@@ -11,7 +10,6 @@ axios.interceptors.request.use(
   (err) => {
     // רישום השגיאה בקונסול
     console.error(" error in ", err)
-    console.log(" error in ", err)
     return Promise.reject(err);
   })
 
