@@ -29,12 +29,14 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         policy =>
         {
-            policy.AllowAnyOrigin()// הרשאה לכל מקור (דומיין) - ב
-                .AllowAnyMethod()// הרשאה לכל שיטת 
+            policy.WithOrigins("https://authclient-f2wu.onrender.com")// הרשאה לכל מקור (דומיין) - ב
+               .WithMethods("GET", "POST", "PUT", "DELETE")
                 .AllowAnyHeader();
         });
 });
-
+// policy.AllowAnyOrigin()// הרשאה לכל מקור (דומיין) - ב
+//                 .AllowAnyMethod()// הרשאה לכל שיטת 
+//                 .AllowAnyHeader();
 
 // הוספת שירותים לחיבור למסד הנתונים באמצעות Entity Framework Core
 builder.Services.AddDbContext<ToDoDbContext>(options =>
