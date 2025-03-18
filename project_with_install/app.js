@@ -1,34 +1,21 @@
 import express from 'express';
-import cors from 'cors';
-import routep from './rout.js';
+const express = require('express');
+const renderApi = require('@api/render-api');
 
 const app = express();
-const port = process.env.PORT || 8080;
 
-app.use(cors());
-
-app.get("/", (req, res) => {
-    res.send("Publishing a Node app");
+app.get('/services', async (req, res) => {
+    try {
+        renderApi.auth('rnd_lVFPbXqkEVHYTyqKwidsTtakBBXg'); // החלף את YOUR_API_KEY במפתח ה-API שלך
+        const { data } = await renderApi.listServices({ includePreviews: 'true' });
+        res.json(data);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'שגיאה פנימית בשרת' });
+    }
 });
 
-app.use('/render-projects', routep);
-
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
-// import express from 'express'
-// import cors from 'cors'
-// import routep from './rout.js';
-
-// //http://localhost:8080/render-projects/getAll
-
-// const app=express()
-
-// app.use(cors())
-
-// app.get("/",()=>"Publishing a Node app")
-
-// app.use('/render-projects',routep)
-
-// app.listen("8080",()=>{console.log("run barouch hashem")})
