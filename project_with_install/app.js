@@ -1,11 +1,10 @@
 import express from 'express';
-const renderApi = require('@api/render-api');
-
+import renderApi from '@api/render-api';
 const app = express();
 
 app.get('/services', async (req, res) => {
     try {
-        renderApi.auth('rnd_lVFPbXqkEVHYTyqKwidsTtakBBXg'); // החלף את YOUR_API_KEY במפתח ה-API שלך
+        renderApi.auth('rnd_lVFPbXqkEVHYTyqKwidsTtakBBXg'); 
         const { data } = await renderApi.listServices({ includePreviews: 'true' });
         res.json(data);
     } catch (err) {
