@@ -5,6 +5,7 @@ import routep from './rout.js';
 //http://localhost:8080/render-projects/getAll
 
 const app=express()
+
 app.use(cors())
 
 app.get("/",()=>"Publishing a Node app")
