@@ -1,5 +1,4 @@
 import express from 'express';
-const express = require('express');
 const renderApi = require('@api/render-api');
 
 const app = express();
