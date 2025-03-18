@@ -7,6 +7,8 @@ import routep from './rout.js';
 const app=express()
 app.use(cors())
 
+app.get("/",()=>"Publishing a Node app")
+
 app.use('/render-projects',routep)
 
 app.listen("8080",()=>{console.log("run barouch hashem")})
