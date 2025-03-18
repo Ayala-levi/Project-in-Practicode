@@ -1,8 +1,9 @@
 import express from 'express';
 import renderApi from '@api/render-api';
+
 const app = express();
 
-app.get('/services', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         renderApi.auth('rnd_lVFPbXqkEVHYTyqKwidsTtakBBXg'); 
         const { data } = await renderApi.listServices({ includePreviews: 'true' });
