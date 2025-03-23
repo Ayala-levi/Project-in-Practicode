@@ -94,5 +94,5 @@ npm start
 * ה-API מוגדר עם CORS כדי לאפשר קריאות מאפליקציית הלקוח.
 * ה-API כולל Swagger לתיעוד וניסיון של נקודות הקצה.
 * נעשה שימוש ב-Axios לביצוע קריאות HTTP מאפליקציית הלקוח.
-  ### קישור לרנדר: https://authclient-f2wu.onrender.com
+### קישור לרנדר: https://authclient-f2wu.onrender.com
 
