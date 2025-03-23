@@ -42,6 +42,7 @@ npm start
 - The API is configured with CORS to allow requests from the client application.
 - The API includes Swagger for documentation and testing of endpoints.
 - Axios is used to make HTTP requests from the client application.
+### Render Cloud Link: https://authclient-f2wu.onrender.com
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -93,3 +94,5 @@ npm start
 * ה-API מוגדר עם CORS כדי לאפשר קריאות מאפליקציית הלקוח.
 * ה-API כולל Swagger לתיעוד וניסיון של נקודות הקצה.
 * נעשה שימוש ב-Axios לביצוע קריאות HTTP מאפליקציית הלקוח.
+  ### קישור לרנדר: https://authclient-f2wu.onrender.com
+
