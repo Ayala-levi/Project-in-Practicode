@@ -29,7 +29,7 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         policy =>
         {
-            policy.WithOrigins("https://authclient-f2wu.onrender.com")// הרשאה לכל מקור (דומיין) - ב
+            policy.WithOrigins("https://authclient-f2wu.onrender.com")
                .WithMethods("GET", "POST", "PUT", "DELETE")
                 .WithHeaders("Content-Type", "Authorization");
         });

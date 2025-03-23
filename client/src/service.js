@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // הגדרת כתובת בסיס לכל הבקשות
-axios.defaults.baseURL ="https://authserver-hgz5.onrender.com"
-// axios.defaults.baseURL =process.env.REACT_APP_API_URL
+//axios.defaults.baseURL ="https://authserver-hgz5.onrender.com"
+axios.defaults.baseURL =process.env.REACT_APP_API_URL
 
 // הוספת interceptor לטיפול בבקשות יוצאות
 axios.interceptors.request.use(
